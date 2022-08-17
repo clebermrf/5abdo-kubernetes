@@ -1,13 +1,11 @@
 # 5abdo-kubernetes
 
-Install the dependencies
+Build the image
 ```
-pip install -r requirements.txt
-```
-Start the service
-
-```
-uvicorn main:app --reload
+docker build -t 5abdo .
 ```
 
-You can read the available endpoints at http://localhost:8000/docs
+Run the api
+```
+docker run -p 8000:8000 5abdo 
+```
